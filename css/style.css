@@ -10,6 +10,7 @@ html {
     --font-color1:#8E829B;
     --pad-and-gap:1em;	
     --pad-and-gap-half:calc(var(--pad-and-gap)/2);
+    --price-color:#BC0B28;
 }
 body {
     line-height: 1;
@@ -144,7 +145,18 @@ fieldset{
     padding-left: 1.5em;
     cursor: pointer;
 }
-.above-four{
+.rating-label{
     cursor: pointer;
+}
+.star{
+    width: 45%;
+}
+ins{
+    color:var(--price-color);
+    text-decoration: none;
+    margin-left: var(--pad-and-gap-half);
+}
+.product-options li, button{
+    margin-bottom: var(--pad-and-gap-half);
 }
 
