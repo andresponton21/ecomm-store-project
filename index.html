@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness 4 All</title>
-    <meta name="description" content="excersice equipment">
+    <meta name="description" content="exercise equipment">
     <meta name="author" content="Andres Ponton">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+
     <header class="page-header">
-      <a href="index.html" class="logo">Fitness 4 All<!-- Site logo --></a>
+      
+      <a href="index.html" class="logo"><!-- Site logo --></a>
 
       <!-- Navigation menu and toggle button (non-functional) -->
       <button type="button" class="nav-toggle">
@@ -34,22 +36,22 @@
 
       <!-- Search for a product (non-functional) -->
       <form class="search">
-        <label>Search
-          <input type="search" name="find" id="find">
+        <label>Search:
+          <input type="search" name="find" id="find" class="search-input" >
         </label>
-        <button type="button"><span class="material-icons">search</span></button>
+        <button type="button" class="search-button"><img class="magnifier" src="SVG/lupe.svg" /></button>
       </form>
 
       <!-- Additional links -->
       <ul class="your-products">
-        <li><a href="#"><span class="material-icons" aria-label="Favourites">favorite_border</span></a></li>
-        <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li>
+        <li><a href="#"><span class="material-icons fav" aria-label="Favourites">favorite_border</span></a></li>
+        <li><a href="#"><span class="material-icons cart" aria-label="Items in your cart">shopping_cart</span></a></li>
       </ul>
     </header>
 
     <main class="products">
       <header class="heading">
-        <h1>Sale on [Category Name]</h1>
+        <h1>Sale on Cross Fit Items</h1>
       </header>
 
       <!-- Filtering product form -->
@@ -58,17 +60,17 @@
 
         <div class="filter-options">
           <fieldset>
-            <legend>Colour</legend>
+            <legend>Categories</legend>
             <ul class="filter-list">
-              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+              <li><input type="checkbox" name="category" value="conditioning" id="conditioning"> <label for="conditioning">Conditioning</label></li>
+              <li><input type="checkbox" name="category" value="calisthenics" id="calisthenics"> <label for="calisthenics">Calisthenics</label></li>
+              <li><input type="checkbox" name="category" value="dumbbells" id="dumbbells"> <label for="dumbbells">Dumbbells</label></li>
+              <li><input type="checkbox" name="category" value="weights" id="weights"> <label for="weights">Weights</label></li>
+              <li><input type="checkbox" name="category" value="cardio" id="cardio"> <label for="cardio">Cardio</label></li>
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Sizes</legend>
+            <legend>Price-range</legend>
             <ol class="filter-list">
               <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
               <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
@@ -108,11 +110,11 @@
           </fieldset>
         </div>
         <fieldset>
-          <label for="sort">Show</label>
-          <select name="sort" id="sort">
+          <label class="show-options" for="sort">Show:</label>
+          <select class="select-option" name="sort" id="sort">
             <option value="price-high">Price, highest to lowest</option>
-            <option value="price-low">Price, lowest to highest</option>
-            <option value="newest">Newest releases</option>
+            <option value="price-low">Sort by best selling</option>
+            <option value="newest">Sort by latest</option>
           </select>
         </fieldset>
       </form>
@@ -123,7 +125,7 @@
         <!-- Product 1 -->
         <article class="product">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img src="img/ropes.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
@@ -160,7 +162,7 @@
         <!-- Product 2 -->
         <article class="product">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img src="img/liftbar.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
@@ -197,7 +199,7 @@
         <!-- Product 3 -->
         <article class="product">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img src="img/bike.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
@@ -234,7 +236,7 @@
         <!-- Product 4 -->
         <article class="product">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img src="img/dumbell.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
@@ -271,7 +273,7 @@
         <!-- Product 5 -->
         <article class="product">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img src="img/treadmill.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
@@ -308,7 +310,7 @@
         <!-- Product 6 -->
         <article class="product">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img src="img/matt.jpg" alt="Product Image">
             <h3>Product Name</h3>
             <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>

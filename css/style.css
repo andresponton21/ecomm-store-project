@@ -1,1 +1,130 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
+html {
+	--primary-background: #570cc7;    /* main colour */
+	--secondary-background: #361275;    /* variant */
+	--third-background: #6f24f5;     /* for text or icons */
+	--fourth-background: #190836;
+	--fifth-background: #6521db;
+	--alt-color: #a8a100;
+    --alt-color2: #f5eb25;
+    --font-color1:#8E829B;
+    --pad-and-gap:1em;	
+    --pad-and-gap-half:calc(var(--pad-and-gap)/2);
+}
+body {
+    line-height: 1;
+    font-family: "Arial Rounded MT Bold" ;
+    color: var(--font-color1);
+}
+.page-header{
+    background-image: 
+    linear-gradient(var(--third-background), var(--primary-background),var(--secondary-background));
+    color: white;
+    display: grid;
+    grid-template-columns:auto 1fr auto auto; 
+    grid-template-areas: 
+    "logo logo prod toggle"
+    "search search search search"
+    "nav nav nav nav"
+    ;
+}
+.logo {
+    grid-area: logo;
+    background-image: url(../SVG/logo.svg);
+    background-repeat: no-repeat;
+    margin-bottom: 0.25em;
+}
+.nav-toggle {
+    grid-area: toggle;
+}
+.search {
+    grid-area: search;
+    margin-top:var(--pad-and-gap);
+    margin-bottom: var(--pad-and-gap-half);
+}
+.navigation {
+    grid-area: nav;
+    margin-bottom: 0.5em;
+    
+}
+.your-products {
+    display: flex;
+    grid-area: prod;
+}
+.your-products li {
+    margin-left: 0.35em;
+    margin-right: 0.35em;
+}
+.products, .page-header, .page-footer {
+    padding-left: var(--pad-and-gap);
+    padding-right: var(--pad-and-gap);
+    padding-top: var(--pad-and-gap-half);
+
+}
+.pagination {
+    text-align: center;
+}
+.pages {
+    display: flex;
+    justify-content: center;
+}
+.pages > li {
+    margin: calc(var(--pad-and-gap)/2);
+}
+.social, .legal {
+    display: flex;
+    justify-content: flex-end;
+    margin: calc(var(--pad-and-gap)/2);
+    padding: calc(var(--pad-and-gap)/2);
+}
+.copyright {
+    text-align: right;
+}
+
+.search-input{
+	font-size: var(--pad-and-gap);
+    background-color: lightgrey;
+    border: black solid 1px ;
+    border-radius: 20px;
+    margin: 0.25em 0 0.25em 0;
+    padding: 0.5em;
+    color: black;
+    width: 85%;
+}
+.fav, .cart{
+    color:white;    
+}
+.menu a:link {
+    text-decoration: none;
+}
+.menu a:visited {
+    color: white;
+}
+.menu a:hover {
+    color:var(--alt-color2)
+}
+.menu a:active {
+    color:var(--alt-color)
+}
+.magnifier{
+    height: auto;
+    width: 2em; 
+}
+.search-button{
+    background-color: transparent;
+    border: none;
+}
+legend {
+    margin-bottom: calc(var(--pad-and-gap)/2);
+    padding-top: var(--pad-and-gap);
+}
+fieldset{
+    margin-top: calc(var(--pad-and-gap)/2);
+    font-size: 1.2em;
+}
+.show-options{
+    margin-right: calc(var(--pad-and-gap)/2);
+}
+.select-option {
+    font-size: var(--pad-and-gap);
+}
