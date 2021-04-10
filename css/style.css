@@ -159,4 +159,8 @@ ins{
 .product-options li, button{
     margin-bottom: var(--pad-and-gap-half);
 }
+.product{
+    margin-bottom: 0.5em;
+    border-bottom: var(--font-color1) groove 0.125em;
+}
 
