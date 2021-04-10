@@ -24,9 +24,9 @@
         <ul class="menu">
           <li><a href="#">Shop</a>
             <ul class="submenu">
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
+              <li><a href="#">Cardio Equipment</a></li>
+              <li><a href="#">Conditioning</a></li>
+              <li><a href="#">Weights</a></li>
             </ul>
           </li>
           <li><a href="#">About</a></li>
@@ -62,46 +62,46 @@
           <fieldset>
             <legend>Categories</legend>
             <ul class="filter-list">
-              <li><input type="checkbox" name="category" value="conditioning" id="conditioning"> <label for="conditioning">Conditioning</label></li>
-              <li><input type="checkbox" name="category" value="calisthenics" id="calisthenics"> <label for="calisthenics">Calisthenics</label></li>
-              <li><input type="checkbox" name="category" value="dumbbells" id="dumbbells"> <label for="dumbbells">Dumbbells</label></li>
-              <li><input type="checkbox" name="category" value="weights" id="weights"> <label for="weights">Weights</label></li>
-              <li><input type="checkbox" name="category" value="cardio" id="cardio"> <label for="cardio">Cardio</label></li>
+              <li><input type="radio" class="radio" name="category" value="conditioning" id="conditioning"> <label for="conditioning" class="radio-button">Conditioning</label></li>
+              <li><input type="radio" class="radio" name="category" value="calisthenics" id="calisthenics"> <label for="calisthenics" class="radio-button">Calisthenics</label></li>
+              <li><input type="radio" class="radio" name="category" value="dumbbells" id="dumbbells"> <label for="dumbbells" class="radio-button">Dumbbells</label></li>
+              <li><input type="radio" class="radio" name="category" value="weights" id="weights"> <label for="weights" class="radio-button">Weights</label></li>
+              <li><input type="radio" class="radio" name="category" value="cardio" id="cardio"> <label for="cardio" class="radio-button">Cardio</label></li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Price-range</legend>
             <ol class="filter-list">
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+              <li><input type="checkbox" class="checkbox" name="price-range" value="$50-$150" id="$50-$150"> <label for="$50-$150" class="check-button">$50 - $150</label></li>
+              <li><input type="checkbox" class="checkbox" name="price-range" value="$150-$300" id="$150-$300"> <label for="$150-$300" class="check-button">$150 - $300</label></li>
+              <li><input type="checkbox" class="checkbox" name="price-range" value="$300-$600" id="$300-$600"> <label for="$300-$600" class="check-button"></label>$300 - $600</li>
+              <li><input type="checkbox" class="checkbox" name="price-range" value="$600-$1000" id="$600-$1000"> <label for="$600-$1000" class="check-button">$600 - $1,000</label></li>
+              <li><input type="checkbox" class="checkbox" name="price-range" value="$1000-$3000" id="$1000-$3000"> <label for="$1000-$3000" class="check-button">$1,000 - $3,000</label></li>
             </ol>
           </fieldset>
           <fieldset>
             <legend>Ratings (above)</legend>
             <ol class="filter-list">
               <li>
-                <input type="radio" name="rating" value="4" id="aboveFour">
-                <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                <input type="radio" class="radio" name="rating" value="4" id="aboveFour">
+                <label for="aboveFour" class="above-four">
+                 <img class="four" src="Svg/fourstars.svg" alt="">
                 </label>
               </li>
               <li>
-                <input type="radio" name="rating" value="3" id="aboveThree">
+                <input type="radio" class="radio" name="rating" value="3" id="aboveThree">
                 <label for="aboveThree">
                   <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
                 </label>
               </li>
               <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo">
+                <input type="radio" class="radio" name="rating" value="2" id="aboveTwo">
                 <label for="aboveTwo">
                   <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
                 </label>
               </li>
               <li>
-                <input type="radio" name="rating" value="1" id="aboveOne">
+                <input type="radio" class="radio" name="rating" value="1" id="aboveOne">
                 <label for="aboveOne">
                   <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
                 </label>

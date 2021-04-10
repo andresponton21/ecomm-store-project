@@ -69,13 +69,13 @@ body {
     justify-content: center;
 }
 .pages > li {
-    margin: calc(var(--pad-and-gap)/2);
+    margin: var(--pad-and-gap-half);
 }
 .social, .legal {
     display: flex;
     justify-content: flex-end;
-    margin: calc(var(--pad-and-gap)/2);
-    padding: calc(var(--pad-and-gap)/2);
+    margin: var(--pad-and-gap-half);
+    padding: var(--pad-and-gap-half);
 }
 .copyright {
     text-align: right;
@@ -115,16 +115,36 @@ body {
     border: none;
 }
 legend {
-    margin-bottom: calc(var(--pad-and-gap)/2);
+    margin-bottom: var(--pad-and-gap-half);
     padding-top: var(--pad-and-gap);
 }
 fieldset{
-    margin-top: calc(var(--pad-and-gap)/2);
+    margin-top: var(--pad-and-gap-half);
     font-size: 1.2em;
 }
 .show-options{
-    margin-right: calc(var(--pad-and-gap)/2);
+    margin-right: var(--pad-and-gap-half);
 }
 .select-option {
     font-size: var(--pad-and-gap);
 }
+.filter-list li{
+    margin-bottom: var(--pad-and-gap-half);
+}
+.radio, .checkbox{
+    display: none;
+}
+.radio-button{
+    background: url(../SVG/radiobuton.svg) no-repeat left;
+    padding-left: 1.5em;
+    cursor: pointer;
+} 
+.check-button{
+    background: url(../SVG/checkb.svg) no-repeat left;
+    padding-left: 1.5em;
+    cursor: pointer;
+}
+.above-four{
+    cursor: pointer;
+}
+
