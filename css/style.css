@@ -31,7 +31,7 @@ body {
 }
 .logo {
     grid-area: logo;
-    background-image: url(../SVG/logo.svg);
+    background-image: url(../assets/SVG/logo.svg);
     background-repeat: no-repeat;
     margin-bottom: 0.25em;
 }
@@ -72,11 +72,12 @@ body {
 .pages > li {
     margin: var(--pad-and-gap-half);
 }
-.social, .legal {
+.social {
     display: flex;
     justify-content: space-around;
     margin: var(--pad-and-gap-half);
     padding: var(--pad-and-gap-half);
+    text-align: center;
 }
 .copyright {
     text-align: right;
@@ -136,12 +137,12 @@ fieldset{
     display: none;
 }
 .radio-button{
-    background: url(../SVG/radiobuton.svg) no-repeat left;
+    background: url(../assets/SVG/radiobuton.svg) no-repeat left;
     padding-left: 1.5em;
     cursor: pointer;
 } 
 .check-button{
-    background: url(../SVG/checkb.svg) no-repeat left;
+    background: url(../assets/SVG/checkb.svg) no-repeat left;
     padding-left: 1.5em;
     cursor: pointer;
 }
@@ -155,9 +156,6 @@ ins{
     color:var(--price-color);
     text-decoration: none;
     margin-left: var(--pad-and-gap-half);
-}
-.product-options li, button{
-    margin-bottom: var(--pad-and-gap-half);
 }
 .product{
     margin-bottom: 0.5em;
@@ -179,16 +177,40 @@ ins{
 .page-footer a:active {
     color:var(--alt-color)
 }
-/* .social li{
-    margin-right: var(--pad-and-gap-half)
-} */
-/* .social, .legal{
+.legal{
+    line-height: 1.5;
     text-align: center;
-    display: flex;
-    justify-content:space-between;
-    
-} */
-.media img{
-    height: 3em;
 }
+
+.media{
+    text-align: center;
+}
+.media img{
+    height: 2.5em;
+}
+p{
+    font-family: "Helvetica Neue"
+}
+.add-to-cart{
+    background: url(../assets/SVG/add-to-cart-button.svg) no-repeat;
+    height: 4em;
+    width: 12.5em;
+    border: none;
+}
+.product-options li{
+    margin-bottom: var(--pad-and-gap-half);
+}
+.product-options .add-to-cart{
+    margin-left: -0.5em;
+}
+.add-favourite{
+    background: url(../assets/SVG/favourite.svg) no-repeat center;
+    height: 4em;
+    width: 2.5em;
+    border:none ;
+    
+}
+
+
+
 
