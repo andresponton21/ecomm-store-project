@@ -74,7 +74,7 @@ body {
 }
 .social, .legal {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     margin: var(--pad-and-gap-half);
     padding: var(--pad-and-gap-half);
 }
@@ -162,5 +162,33 @@ ins{
 .product{
     margin-bottom: 0.5em;
     border-bottom: var(--font-color1) groove 0.125em;
+}
+.page-footer{
+    background-color: var(--fifth-background);
+    color: white;
+}
+.page-footer a:link {
+    text-decoration: none;
+}
+.page-footer a:visited {
+    color: white;
+}
+.page-footer a:hover {
+    color:var(--alt-color2)
+}
+.page-footer a:active {
+    color:var(--alt-color)
+}
+/* .social li{
+    margin-right: var(--pad-and-gap-half)
+} */
+/* .social, .legal{
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+    
+} */
+.media img{
+    height: 3em;
 }
 
