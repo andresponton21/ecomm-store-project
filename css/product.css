@@ -55,7 +55,7 @@ body {
     display: flex;
     grid-area: prod;
 }
-.products, .page-header, .page-footer {
+.products, .page-header{
     padding-left: var(--pad-and-gap);
     padding-right: var(--pad-and-gap);
     padding-top: var(--pad-and-gap-half);
@@ -74,7 +74,7 @@ body {
 .social {
     display: flex;
     justify-content: space-around;
-    margin: var(--pad-and-gap-half);
+    margin-left: var(--pad-and-gap-half);
     padding: var(--pad-and-gap-half);
     text-align: center;
 }
@@ -156,15 +156,11 @@ ins{
     text-decoration: none;
     margin-left: var(--pad-and-gap-half);
 }
-.product{
-    margin-bottom: 0.5em;
-    border-bottom: var(--font-color1) groove 0.125em;
-}
-body .page-footer{
+
+.products .page-footer{
     background-color: var(--fifth-background);
     color: white;
-    margin-bottom: -1em;
-   
+    margin: 0 -1em -1em;
 }
 .page-footer a:link {
     text-decoration: none;
@@ -179,16 +175,16 @@ body .page-footer{
     color:var(--alt-color)
 }
 .legal{
-    line-height: 1.5;
+    line-height: 1.25;
     text-align: center;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .media{
     text-align: center;
 }
 .media img{
-    height: 2.5em;
+    height: 1.5em;
 }
 p{
     font-family: "Helvetica Neue"
@@ -226,6 +222,4 @@ p{
 dt{
     margin-bottom: 0.25em;
 }
-
-
 

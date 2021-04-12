@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness 4 All-Product</title>
+    <meta name="description" content="dumbbells">
+    <meta name="author" content="Andres Ponton">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/product.css">
+  </head>
+  <body>
+
+    <header class="page-header">
+      
+      <a href="index.html" class="logo"><!-- Site logo --></a>
+
+      <!-- Navigation menu and toggle button (non-functional) -->
+      <button type="button" class="nav-toggle">
+        <span class="material-icons">menu</span>
+      </button>
+      <nav aria-label="Primary" class="navigation">
+        <ul class="menu">
+          <li><a href="#">Shop</a>
+            <ul class="submenu">
+              <li><a href="#">Cardio Equipment</a></li>
+              <li><a href="#">Conditioning</a></li>
+              <li><a href="#">Weights</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search for a product (non-functional) -->
+      <form class="search">
+        <label>Search:
+          <input type="search" name="find" id="find" class="search-input" placeholder="Look for a product">
+        </label>
+        <button type="button" class="search-button"><img class="magnifier" src="../assets/SVG/lupe.svg" /></button>
+      </form>
+
+      <!-- Additional links -->
+      <ul class="your-products">
+        <li class="favourite-sm"><a href="#"><span  aria-label="Favourites"></span></a></li>
+        <li class="only-cart"><a href="#" ><span  aria-label="Items in your cart"></span></a></li>
+      </ul>
+    </header>
+
+    <main class="products">
+        <!-- Product  -->
+        <article class="product">
+        <h2 class="subheading">Results</h2>
+          <header>
+            <img src="../assets/img/dumbell.jpg" alt="Product Image">
+            <h3>Dumbbells</h3>
+            <data value="119"><del>$150.00</del> <ins>$90.00</ins></data>
+            <p>Dumbbells can give you a great full body workout and are ever preferred for certain exercises by some. 
+              For each body part their is a wide variety of dumbbell movements that can be preformed</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>
+                <img class="star" src="../assets/SVG/fourstars.svg" alt="">
+                <!-- <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span> -->
+              </dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <form>
+            <fieldset class="product-options">
+              <legend>Weight</legend>
+              <ol>
+                <li><label class="radio-button"><input type="radio" class="radio" name="weight" value="light"> 5 kgs</label></li>
+                <li><label class="radio-button"><input type="radio" class="radio" name="weight" value="medium"> 20 kgs</label></li>
+                <li><label class="radio-button"><input type="radio" class="radio" name="weight" value="heavy"> 30 kgs</label></li>
+              </ol>
+            </fieldset>
+          </form>
+          <footer class="product-options">
+            <button type="button" class="add-to-cart"></button>
+            <button type="button" class="add-favourite"></button>
+          </footer>
+        </article>
+
+
+    <footer class="page-footer">
+      <ul class="social">
+        <li><a href="../assets/SVG/face-transparent.svg"><span class="media">
+          <img src="../assets/SVG/face-transparent.svg" alt="facebook-icon">
+        </span>Facebook </a></li>
+        <li><a href="../assets/SVG/tweeter-white.svg"><span class="media">
+          <img src="../assets/SVG/tweeter-white.svg" alt="tweeter-icon">
+        </span>Tweeter </a></li>
+        <li><a href="../assets/SVG/Insta-white.svg"><span class="media">
+          <img src="../assets/SVG/Insta-white.svg" alt="instagram-icon">
+        </span>Instagram </a></li>
+      </ul>
+      <nav aria-label="Legal">
+        <ul class="legal">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility Policy</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; Copyright, Fitness4all, 2021.</p>
+    </footer>
+
+  </body>
+</html>
