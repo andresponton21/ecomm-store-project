@@ -95,8 +95,12 @@ body {
 .fav, .cart{
     color:white;    
 }
+a {
+    color: white;
+}
 .menu a:link {
     text-decoration: none;
+    color: white;
 }
 .menu a:visited {
     color: white;
@@ -225,6 +229,9 @@ p{
 }
 dt{
     margin-bottom: 0.25em;
+}
+.product a {
+    color: var(--fourth-background);
 }
 
 

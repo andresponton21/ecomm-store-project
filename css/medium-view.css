@@ -1,0 +1,66 @@
+@media only screen and (min-width: 26em) {
+ 
+    .search-input{
+        width: 55%;
+    }
+
+  }
+
+
+
+
+@media only screen and (min-width: 40em) {
+    html {
+        --primary-background: #570cc7;    /* main colour */
+        --secondary-background: #361275;    /* variant */
+        --third-background: #6f24f5;     /* for text or icons */
+        --fourth-background: #190836;
+        --fifth-background: #6521db;
+        --alt-color: #FFC72F;
+        --alt-color2: #F5D951;
+        --font-color1:#8E829B;
+        --pad-and-gap:1em;	
+        --pad-and-gap-half:calc(var(--pad-and-gap)/2);
+        --price-color:#BC0B28;
+    }
+    body {
+      font-size: 1.35em;
+    }
+    .page-header{
+        font-size: 1.2em;
+    }
+    .search-input{
+        width: 55%;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 15em auto;
+        grid-gap: var(--pad-and-gap);
+        grid-template-areas: 
+        "heading heading"
+        "filter result"
+        "pag pag"
+        
+        ;
+    }
+    .heading{
+        grid-area: heading;
+    }
+    .filters{
+        grid-area: filter;
+        border: var(--alt-color) solid 0.2em;
+        padding-left: 0.5em;
+        background-color: var(--alt-color);
+        opacity: 0.75;
+        border-radius: 0.5em;
+        
+        color: black;
+    }
+    .results{
+        grid-area: result;
+    }
+    .pagination{
+        grid-area: pag;
+    }
+  
+  }
