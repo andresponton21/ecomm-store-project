@@ -1,3 +1,4 @@
+
 @media only screen and (min-width: 70em) {
     html {
         --primary-background: #570cc7;    /* main colour */
@@ -12,18 +13,110 @@
         --pad-and-gap-half:calc(var(--pad-and-gap)/2);
         --price-color:#BC0B28;
     }
-    body{
-        background-color: lightblue;
+    .page-header{
+        display: grid;
+        grid-template-columns:auto 1fr auto auto auto;
+        grid-template-areas: 
+        "a c c d e";
+
     }
-
-
-
-
-
-
-
-
-
-
+    .nav-toggle{
+        display: none;
+    }
+    .logo{
+        grid-area: a;
+        font-size: 0.5em;
+        margin-top: 0.5em;
+        margin-right: 2em;
+    }
+    .search{
+        grid-area: c;
+        padding-top: 0.5em;
+        font-size: 0.8em;
+    }
+    .search-input{
+        width: 55%;
+        height: 45%;
+        font-size: 0.5em;
+    }
+    .search-button{
+        font-size: 0.7em;
+    }
+    .navigation{
+        grid-area: d;
+    }
+    .your-products{
+        grid-area: e;
+        padding-top: 1em;
+    }
+    .menu{
+        display: flex;
+        font-size: 0.7em;
+        text-align: center;
+        padding-top: 2em;
+        margin-right: 1em;
+    }
+    .menu > li{
+        display: flex;
+        margin-right: 0.25em;
+        margin-left: 0.25em;
+    }
+    .submenu li{
+        display: flex;
+        padding-left: 0;
+        margin-right: 0.25em;
+        margin-left: 0.25em;
+    }
+    .products{
+        display: block;
+    }
+    .filter-options{
+        display: flex;
+        justify-content: space-between;
+    }
+    .filter-list{
+        margin-right: 1em;
+        /* display: flex; */
+    }
+    .filters{
+        background-color: white;
+        border: none;
+        line-height: 1;
+        font-size: 0.7em;
+    }
+    .results{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "sub sub";
+        grid-gap: var(--pad-and-gap);
+    }
+    .subheading{
+        grid-area: sub;
+    }
+    .results{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "sh sh";
+    }
+    .subheading{
+        grid-area: sh;
+    }
+    .product{
+        border: gray groove 1px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product-options{
+        margin-left: 1em;
+    }
+    .legal{
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.8em;
+        padding-top: 0.5em;
+    }
+    .social li{
+        font-size: 0.8em;
+    }
 
 }
