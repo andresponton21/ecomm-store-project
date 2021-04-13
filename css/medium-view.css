@@ -62,5 +62,8 @@
     .pagination{
         grid-area: pag;
     }
+    .star{
+        width: 35%;
+    }
   
   }

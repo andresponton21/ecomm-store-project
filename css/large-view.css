@@ -108,6 +108,8 @@
     }
     .product-options{
         margin-left: 1em;
+        font-size: 0.8em;
+
     }
     .legal{
         display: flex;

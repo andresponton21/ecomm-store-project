@@ -341,6 +341,15 @@ dt{
     .star{
         width: 15%;
     }
+    .legal{
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.8em;
+        padding-top: 0.5em;
+    }
+    .social li{
+        font-size: 0.8em;
+    }
 
 }
 
