@@ -1,6 +1,9 @@
 # Web Design & Development 1
 ## E-Comm Webstore: PART 2
 
+### validator web3 and lighthouse images
+<img src="Webstore(Design)/web3check.png">
+
 ### Outline
 
 Read and complete the steps in the following two documents:
