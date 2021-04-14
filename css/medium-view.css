@@ -48,12 +48,9 @@
     }
     .filters{
         grid-area: filter;
-        border: var(--alt-color) solid 0.2em;
-        padding-left: 0.5em;
-        background-color: var(--alt-color);
-        opacity: 0.75;
+        padding-left: 0.7em;
+        background-color: rgb(255, 199, 47, 0.6);
         border-radius: 0.5em;
-        
         color: black;
     }
     .results{

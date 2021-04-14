@@ -226,6 +226,7 @@ p{
 dt{
     margin-bottom: 0.25em;
 }
+
 /* single product layout */
 .product img{
     margin-top: var(--pad-and-gap-half);
@@ -253,6 +254,9 @@ dt{
     grid-area: alt3;
     border: 0.15em solid var(--fourth-background);
 }
+.product a{
+    color: black;
+}
 
 
 /* medium view port layout */
@@ -263,6 +267,9 @@ dt{
     }
     .star{
         width: 35%;
+    }
+    .nav-toggle{
+        display: none;
     }
 
   }

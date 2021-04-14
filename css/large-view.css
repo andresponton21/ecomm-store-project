@@ -83,6 +83,7 @@
         border: none;
         line-height: 1;
         font-size: 0.7em;
+        color: var(--font-color1);
     }
     .results{
         display: grid;
