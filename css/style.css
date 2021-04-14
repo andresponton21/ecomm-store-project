@@ -243,6 +243,14 @@ dt{
 .product a {
     color: var(--fourth-background);
 }
+.products{
+    color: black;
+}
+fieldset{
+    border: black solid 2px;
+
+}
+
 
 
 
