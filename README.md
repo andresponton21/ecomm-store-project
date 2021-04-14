@@ -2,7 +2,10 @@
 ## E-Comm Webstore: PART 2
 
 ### validator web3 and lighthouse images
-<img src="Webstore(Design)/web3check.png">
+<img src="assets/validations/web3check.png">
+<img src="assets/validations/lighthouse-check.png">
+
+
 
 ### Outline
 
