@@ -3,43 +3,245 @@ const productsData = [
       id: 1,
       name:'Fitness Ropes',
       price: { before: 150, after: 119 },
-      colours: [ `Red`, `Black`, `Grey` ],
-      Sizes: [ `S`, `M`, `L` ],
-      photo: `ropes.jpg`
-    }, {
-      id: 256,
-      name: { first: `Grace`, last: `Hopper` },
-      gpa: 3.9,
-      enrolled: [ `WDDM 113`, `WDDM 114`, `WDDM 115` ],
-      photo: `grace-hopper.jpg`
-    }, {
-      id: 263,
-      name: { first: `Alan`, last: `Turing` },
-      gpa: 2.3,
-      enrolled: [],
-      photo: `alan-turing.jpg`
-    }
+      filters: [
+         {
+         filterName:`Colours`,
+         filterOptions:[ `Red`, `Black`, `Grey` ]
+        },
+        {
+         filterName:`Sizes`,
+         filterOptions:[ `S`, `M`, `L` ]
+        },  
+      ],
+      photo: `ropes`,
+      description: `You'll train the muscles in your upper back, arms, abs, back, 
+      glutes and if you incorporate jumps, lunges, and squats`,
+      linkTo:`Pages/product.html`
+    }, 
+    {
+        id: 2,
+        name:'Lifting Bars',
+        price: { before: 399, after: 250 },
+        filters: [
+            {
+            filterName:`Colours`,
+            filterOptions:[ `Red`, `Black`, `Grey` ]
+           },
+           {
+            filterName:`Sizes`,
+            filterOptions:[ `M`, `L`, `XL` ]
+           },  
+         ],
+        photo: `liftbar`,
+        description: `A piece of exercise equipment used in weight training, 
+        bodybuilding, weightlifting and powerlifting`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 3,
+        name:'Indoor Bikes',
+        price: { before: 780, after: 619 },
+        filters: [
+            {
+            filterName:`Features`,
+            filterOptions:[ `Standar`, `Premium`, `Enhanced` ]
+           },
+           {
+            filterName:`Sizes`,
+            filterOptions:[ `S`, `M`, `L` ]
+           },  
+         ],
+        photo: `bike`,
+        description: `These help you shed fat, improve your heart health, and boost your muscle endurance. 
+        Your legs will get a serious workout.`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 4,
+        name:'Dumbbells',
+        price: { before: 150, after: 90 },
+        filters: [
+            {
+            filterName:`Weight`,
+            filterOptions:[ `5 kgs`, `20 kgs`, `30 kgs` ]
+           },
+           {
+            filterName:`Sizes`,
+            filterOptions:[ `S`, `M`, `L` ]
+           }, 
+          
+         ],
+        photo: `dumbell`,
+        description: `Dumbbells can give you a great full body workout and are ever preferred for certain exercises by some. 
+        For each body part their is a wide variety of dumbbell movements that can be preformed`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 5,
+        name:'Treadmills',
+        price: { before: 2140, after: 1240 },
+        filters: [
+            {
+            filterName:`Features`,
+            filterOptions:[ `Standar`, `Premium`, `Enhanced` ]
+           },
+           {
+            filterName:`Sizes`,
+            filterOptions:[ `S`, `M`, `L` ]
+           },  
+         ],
+        photo: `treadmill`,
+        description: `Walking or running on a treadmill is an excellent source of exercise 
+        that puts less stress on the body than walking or running on a flat surface outdoors`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 6,
+        name:'Mats',
+        price: { before: 39, after: 29 },
+        filters: [
+            {
+            filterName:`Colours`,
+            filterOptions:[ `Magenta`, `Black`, `Pink` ]
+           },
+           {
+            filterName:`Sizes`,
+            filterOptions:[ `M`, `L`, `XL` ]
+           },  
+         ],
+        photo: `matt`,
+        description: `Is perfect for a Enhanced body strength, 
+        HIIT workouts, crunches, pushups and yoga`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 7,
+        name:'Boxing Gloves',
+        price: { before: 99, after: 79 },
+        filters: [
+           {
+           filterName:`Colours`,
+           filterOptions:[ `Red`, `Black`, `Yellow` ]
+          },
+          {
+           filterName:`Sizes`,
+           filterOptions:[ `S`, `M`, `L` ]
+          },  
+        ],
+        photo: `boxing`,
+        description: `cushioned gloves that boxers wear during matches and training sessions. 
+        They're designed to protect the wearer and his or her opponent from injuries while fighting`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 8,
+        name:'Leggings',
+        price: { before: 89, after: 39 },
+        filters: [
+           {
+           filterName:`Colours`,
+           filterOptions:[ `Blue`, `Black`, `Pink` ]
+          },
+          {
+           filterName:`Sizes`,
+           filterOptions:[ `S`, `M`, `L` ]
+          },  
+        ],
+        photo: `clothing`,
+        description: `worn for warmth and protection by both men and women throughout the centuries. 
+        The linen pantalettes worn by girls and women under crinolines in the mid-19th century were also a 
+        form of leggings, and were originally two separate garments`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 9,
+        name:'Skateboards',
+        price: { before: 109, after: 99 },
+        filters: [
+           {
+           filterName:`Designs`,
+           filterOptions:[ `Oldschool`, `Modern`, `Custom` ]
+          },
+          {
+           filterName:`Sizes`,
+           filterOptions:[ `S`, `M`, `L` ]
+          },  
+        ],
+        photo: `outdoors`,
+        description: `sports scientists have confirmed that skateboarding is a complete workout in itself. 
+        It not only works the cardiovascular system but also builds muscular strength. 
+        The core of a skateboarder plays a very crucial role`,
+        linkTo:`Pages/product.html`
+      }, 
+      {
+        id: 10,
+        name:'Core and Stability Balls',
+        price: { before: 89, after: 69 },
+        filters: [
+           {
+           filterName:`Colours`,
+           filterOptions:[ `Red`, `Black`, `Blue` ]
+          },
+          {
+           filterName:`Sizes`,
+           filterOptions:[ `S`, `M`, `L` ]
+          },  
+        ],
+        photo: `stability_core`,
+        description: `Adding core strengthening to your exercise routine can help protect your back and neck. 
+        By boosting your core strength, you'll also be less likely to rely on other back pain treatments, such as medications. 
+        It's important to incorporate exercises that work all of your abdominal muscles equally`,
+        linkTo:`Pages/product.html`
+      }, 
   ]
   
-  // Select the element (a <ul> in this case) that will hold all of the student records
-  const products = document.querySelector(`#studentTable`)
+  const productsSection = document.querySelector(`.results`)
   
   
-  // For each of the students in our "database"
-  studentsAr.forEach((student) => {
+  productsData.forEach((product) => {
   
-    // Create a list item (<li>) that is not yet added to the document
-    const listItem = document.createElement(`li`)
+    const oneProduct = document.createElement(`article`)
   
-    // Modify this new element, just like we would any other DOM element
-    listItem.classList.add(`student`)
-    listItem.innerHTML = `
-      <img src="assets/img/${student.photo}" alt="${student.name.first}" class="photo">
-      <b>${student.name.last}, ${student.name.first}</b>
-      <data value="${student.gpa }">${ student.gpa } GPA</data>
+    oneProduct.classList.add(`product`)
+    oneProduct.innerHTML = `
+        <header>
+        <img src="assets/img/${product.photo}.jpg" alt="${product.name}" >
+        <h3>${product.name}</h3>
+        <data value="119"><del>$${product.price.before.toFixed(2)}</del> <ins>$${product.price.after.toFixed(2)}</ins></data>
+        <p>${product.description}</p>
+        <dl>
+        <dt>Rating</dt>
+        <dd>
+            <img class="star" src="assets/SVG/fourstars.svg" alt="stars">
+            <!-- <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span> -->
+        </dd>
+        </dl>
+        <a href="${product.linkTo}">see more</a>
+    </header>
+    <form>
+        <fieldset class="product-options">
+        <legend>${product.filters[0].filterName}</legend>
+        <ul>
+            <li><label class="radio-button"><input type="radio" class="radio" name="colour" value="r"> ${product.filters[0].filterOptions[0]}</label></li>
+            <li><label class="radio-button"><input type="radio" class="radio" name="colour" value="b"> ${product.filters[0].filterOptions[1]}</label></li>
+            <li><label class="radio-button"><input type="radio" class="radio" name="colour" value="g"> ${product.filters[0].filterOptions[2]}</label></li>
+        </ul>
+        </fieldset>
+        <fieldset class="product-options">
+        <legend>${product.filters[1].filterName}</legend>
+        <ol>
+            <li><label class="radio-button"><input type="radio" class="radio" name="size" value="s"> ${product.filters[1].filterOptions[0]}</label></li>
+            <li><label class="radio-button"><input type="radio" class="radio" name="size" value="m"> ${product.filters[1].filterOptions[1]}</label></li>
+            <li><label class="radio-button"><input type="radio" class="radio" name="size" value="l"> ${product.filters[1].filterOptions[2]}</label></li>
+        </ol>
+        </fieldset>
+    </form>
+    <footer class="product-options">
+        <button type="button" class="add-to-cart"></button>
+        <button type="button" class="add-favourite"></button>
+    </footer>
     `
   
-    // Add the new <li> element to the document
-    studentTable.appendChild(listItem)
+    productsSection.appendChild(oneProduct)
   
   })
