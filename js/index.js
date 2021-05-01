@@ -1,3 +1,9 @@
+
+// An Array of 10 unique products, 
+// each reflecting all of the properties 
+// required to build the elements within the interface
+
+
 const productsData = [
     {
       id: 1,
@@ -194,14 +200,19 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
   ]
+
+  //Products are added to the UI using JavaScript only 
+  //(reading from the products Array)
   
   const productsSection = document.querySelector(`.results`)
-  
-  
-  productsData.forEach((product) => {
+  const searchInput = document.querySelector('.search-input')
+
+  const showProducts = function(prodArray){  
+    productsSection.innerHTML = ''
+    prodArray.forEach((product) => {
   
     const oneProduct = document.createElement(`article`)
-  
+    
     oneProduct.classList.add(`product`)
     oneProduct.innerHTML = `
         <header>
@@ -244,3 +255,37 @@ const productsData = [
     productsSection.appendChild(oneProduct)
   
   })
+}
+//showProducts(productsData)
+
+  //Products can be filtered 
+  //(each student will implement ONE filtering method)
+  //implementing a search filter
+
+
+
+  searchInput.addEventListener('input', function(event){
+      const queryProduct = event.target.value.toUpperCase()
+      
+      const filterProducts = productsData.filter(function(product){
+        
+        let prodName = product.name.toUpperCase()
+
+        if (prodName.includes(queryProduct)){
+          return true
+        } else {
+          return false
+        }
+        
+      })
+
+      showProducts(filterProducts) 
+      
+  })
+
+
+  showProducts(productsData)
+  
+  
+
+
