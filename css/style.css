@@ -80,6 +80,7 @@ body {
 }
 .copyright {
     text-align: right;
+    padding-bottom: 1em;
 }
 
 .search-input{
@@ -104,6 +105,25 @@ a {
 }
 .menu a:visited {
     color: white;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    top:100%;
+    background-color: var(--fifth-background);
+    text-align: left;
+    padding: 0;
+    font-size: 0.8em;
+    line-height: 1.5;
+    width: 9.5em;
+    border-radius: 0.5em;
+}
+.menu li{
+    position: relative;
+}
+.menu > li:hover > .submenu{
+    display: block;
+    
 }
 .menu a:hover {
     color:var(--alt-color2)
@@ -132,9 +152,14 @@ fieldset{
 }
 .select-option {
     font-size: var(--pad-and-gap);
+    background-color: #eee;
+    border-radius: 0.5em;
 }
 .filter-list li{
     margin-bottom: var(--pad-and-gap-half);
+}
+.filter-list img{
+    width: 6em;
 }
 .radio, .checkbox{
     display: none;
@@ -144,26 +169,29 @@ fieldset{
     padding-left: 1.5em;
     cursor: pointer;
 } 
-.check-button{
-    background: url(../assets/SVG/checked-check.svg) no-repeat left;
-    padding-left: 1.5em;
-    cursor: pointer;
-}
-.check-button-checked{
-    background: url(../assets/SVG/checkb.svg) no-repeat left;
-    padding-left: 1.5em;
-    cursor: pointer;
-}
-.radio-button-unchecked{
+.radio:checked + .radio-button{
     background: url(../assets/SVG/unchecked-readio.svg) no-repeat left;
     padding-left: 1.5em;
     cursor: pointer;
 } 
+
+
+input:checked + .check-button{
+    background: url(../assets/SVG/checked-check.svg) no-repeat left;
+    padding-left: 1.5em;
+    cursor: pointer;
+}
+.check-button{
+    background: url(../assets/SVG/checkb.svg) no-repeat left;
+    padding-left: 1.5em;
+    cursor: pointer;
+}
+
 .rating-label{
     cursor: pointer;
 }
 .star{
-    width: 45%;
+    width: 25%;
 }
 ins{
     color:var(--price-color);
@@ -171,8 +199,20 @@ ins{
     margin-left: var(--pad-and-gap-half);
 }
 .product{
-    margin-bottom: 0.5em;
-    border-bottom: var(--font-color1) groove 0.125em;
+    padding: 1em;
+    border-radius: 0.25em;
+    background-color: #eee;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    margin-bottom: 1em;
+    position: relative;
+}
+.form-options{
+    margin-bottom: 3em;
+}
+
+.add-product{
+    position: absolute;
+    bottom: 0.25em;
 }
 body .page-footer{
     background-color: var(--fifth-background);
@@ -237,12 +277,23 @@ p{
     width: 2.5em;
     cursor: pointer;
 }
+
 dt{
-    margin-bottom: 0.25em;
+    margin-bottom: 1em;
 }
+
 .product a {
-    color: var(--fourth-background);
+    color: white;
+    text-decoration: none;
+    background-color:var(--primary-background);
+    padding: 0.25em;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.2em #888888;
 }
+.page-footer{
+    font-size: 0.8em;
+}
+
 
 
 

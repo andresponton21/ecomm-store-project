@@ -19,24 +19,25 @@ const productsData = [
       linkTo:`Pages/product.html`
     }, 
     {
-        id: 2,
-        name:'Lifting Bars',
-        price: { before: 399, after: 250 },
-        filters: [
-            {
-            filterName:`Colours`,
-            filterOptions:[ `Red`, `Black`, `Grey` ]
-           },
-           {
-            filterName:`Sizes`,
-            filterOptions:[ `M`, `L`, `XL` ]
-           },  
-         ],
-        photo: `liftbar`,
-        description: `A piece of exercise equipment used in weight training, 
-        bodybuilding, weightlifting and powerlifting`,
-        linkTo:`Pages/product.html`
-      }, 
+      id: 2,
+      name:'Core and Stability Balls',
+      price: { before: 89, after: 69 },
+      filters: [
+         {
+         filterName:`Colours`,
+         filterOptions:[ `Red`, `Black`, `Blue` ]
+        },
+        {
+         filterName:`Sizes`,
+         filterOptions:[ `S`, `M`, `L` ]
+        },  
+      ],
+      photo: `stability_core`,
+      description: `Adding core strengthening to your exercise routine can help protect your back and neck. 
+      By boosting your core strength`,
+      linkTo:`Pages/product.html`
+    },
+  
       {
         id: 3,
         name:'Indoor Bikes',
@@ -175,22 +176,21 @@ const productsData = [
       }, 
       {
         id: 10,
-        name:'Core and Stability Balls',
-        price: { before: 89, after: 69 },
+        name:'Lifting Bars',
+        price: { before: 399, after: 250 },
         filters: [
+            {
+            filterName:`Colours`,
+            filterOptions:[ `Red`, `Black`, `Grey` ]
+           },
            {
-           filterName:`Colours`,
-           filterOptions:[ `Red`, `Black`, `Blue` ]
-          },
-          {
-           filterName:`Sizes`,
-           filterOptions:[ `S`, `M`, `L` ]
-          },  
-        ],
-        photo: `stability_core`,
-        description: `Adding core strengthening to your exercise routine can help protect your back and neck. 
-        By boosting your core strength, you'll also be less likely to rely on other back pain treatments, such as medications. 
-        It's important to incorporate exercises that work all of your abdominal muscles equally`,
+            filterName:`Sizes`,
+            filterOptions:[ `M`, `L`, `XL` ]
+           },  
+         ],
+        photo: `liftbar`,
+        description: `A piece of exercise equipment used in weight training, 
+        bodybuilding, weightlifting and powerlifting`,
         linkTo:`Pages/product.html`
       }, 
   ]
@@ -209,16 +209,15 @@ const productsData = [
         <h3>${product.name}</h3>
         <data value="119"><del>$${product.price.before.toFixed(2)}</del> <ins>$${product.price.after.toFixed(2)}</ins></data>
         <p>${product.description}</p>
-        <dl>
+      
         <dt>Rating</dt>
-        <dd>
+          <dt>
             <img class="star" src="assets/SVG/fourstars.svg" alt="stars">
             <!-- <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span> -->
-        </dd>
-        </dl>
-        <a href="${product.linkTo}">see more</a>
+          </dt>
+        <a class="see-more" href="${product.linkTo}">see product</a>
     </header>
-    <form>
+    <form class="form-options">
         <fieldset class="product-options">
         <legend>${product.filters[0].filterName}</legend>
         <ul>
@@ -236,7 +235,7 @@ const productsData = [
         </ol>
         </fieldset>
     </form>
-    <footer class="product-options">
+    <footer class="product-options add-product">
         <button type="button" class="add-to-cart"></button>
         <button type="button" class="add-favourite"></button>
     </footer>

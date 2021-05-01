@@ -12,6 +12,7 @@
         --pad-and-gap:1em;	
         --pad-and-gap-half:calc(var(--pad-and-gap)/2);
         --price-color:#BC0B28;
+        font-size: 0.8em;
     }
     .page-header{
         display: grid;
@@ -54,18 +55,20 @@
         font-size: 0.7em;
         text-align: center;
         padding-top: 2em;
-        margin-right: 1em;
+        margin-right: 15em;
     }
     .menu > li{
         display: flex;
-        margin-right: 0.25em;
-        margin-left: 0.25em;
+        margin-right: 1em;
+        margin-left: 1em;
     }
     .submenu li{
         display: flex;
-        padding-left: 0;
+        padding: 1em;
         margin-right: 0.25em;
         margin-left: 0.25em;
+        line-height: 1.2;
+        text-align: left;
     }
     .products{
         display: block;
@@ -87,39 +90,22 @@
     }
     .results{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "sub sub";
-        grid-gap: var(--pad-and-gap);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "sub sub sub";
+        grid-gap: 1.5em;
     }
     .subheading{
         grid-area: sub;
     }
-    .results{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "sh sh";
-    }
-    .subheading{
-        grid-area: sh;
-    }
+    
     .product{
-        border: gray groove 1px;
+        margin-bottom: 0;
+    }
+    .form-options{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "opt1 opt2";
     }
-    .product-options{
-        margin-left: 1em;
-        font-size: 0.8em;
-
-    }
-    .legal{
-        display: flex;
-        justify-content: space-around;
-        font-size: 0.8em;
-        padding-top: 0.5em;
-    }
-    .social li{
-        font-size: 0.8em;
-    }
+  
+   
 
 }

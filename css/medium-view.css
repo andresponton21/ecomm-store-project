@@ -38,20 +38,25 @@
         grid-gap: var(--pad-and-gap);
         grid-template-areas: 
         "heading heading"
-        "filter result"
+        "filter filter"
+        "result result"
         "pag pag"
         
         ;
     }
     .heading{
         grid-area: heading;
+        font-size: 0.8em;
     }
     .filters{
         grid-area: filter;
         padding-left: 0.7em;
-        background-color: rgb(255, 199, 47, 0.6);
         border-radius: 0.5em;
         color: black;
+        font-size: 0.75em;
+    }
+    .filter-list img{
+        width: 8em;
     }
     .results{
         grid-area: result;
@@ -60,7 +65,39 @@
         grid-area: pag;
     }
     .star{
-        width: 35%;
+        width: 25%;
+    }
+    .page-footer{
+        font-size: 0.6em;
+    }
+    .results{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "sub sub";
+        grid-gap: 1.5em;
+    }
+    .subheading{
+        grid-area: sub;
+    }
+    .product{
+        margin-bottom: 0;
+    }
+    .form-options{
+        display: grid;
+        grid-template-areas: "opt1 opt2";
+        font-size: 0.8em;
+    }
+    .product img{
+        max-height: 20em;
+    }
+    .form-options{
+        margin-bottom: 4em;
+    }
+    .add-product{
+       font-size: 0.8em;
+    }
+    .product p{
+        font-size: 0.8em;
     }
   
   }

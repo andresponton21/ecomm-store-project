@@ -16,17 +16,18 @@
         display: flex-start;
     } 
     .results{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "sh sh sh";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "sh sh sh sh";
 
     }
     .subheading{
         grid-area: sh;
     }
-    .product-options{
-        font-size: 0.8em;
+    
+    .search-input{
+        height: 3em;
     }
-
+    
 
 
 }
