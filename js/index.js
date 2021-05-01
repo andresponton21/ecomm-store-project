@@ -208,7 +208,7 @@ const productsData = [
   const searchInput = document.querySelector('.search-input')
 
   const showProducts = function(prodArray){  
-    productsSection.innerHTML = ''
+    productsSection.innerHTML = '<h2 class="subheading">Results</h2>'
     prodArray.forEach((product) => {
   
     const oneProduct = document.createElement(`article`)
