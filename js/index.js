@@ -6,7 +6,7 @@
 
 const productsData = [
     {
-      id: 1,
+      id: 0,
       name:'Fitness Ropes',
       price: { before: 150, after: 119 },
       filters: [
@@ -25,7 +25,7 @@ const productsData = [
       linkTo:`Pages/product.html`
     }, 
     {
-      id: 2,
+      id: 1,
       name:'Core and Stability Balls',
       price: { before: 89, after: 69 },
       filters: [
@@ -45,7 +45,7 @@ const productsData = [
     },
   
       {
-        id: 3,
+        id: 2,
         name:'Indoor Bikes',
         price: { before: 780, after: 619 },
         filters: [
@@ -64,7 +64,7 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
       {
-        id: 4,
+        id: 3,
         name:'Dumbbells',
         price: { before: 150, after: 90 },
         filters: [
@@ -84,7 +84,7 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
       {
-        id: 5,
+        id: 4,
         name:'Treadmills',
         price: { before: 2140, after: 1240 },
         filters: [
@@ -103,7 +103,7 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
       {
-        id: 6,
+        id: 5,
         name:'Mats',
         price: { before: 39, after: 29 },
         filters: [
@@ -122,7 +122,7 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
       {
-        id: 7,
+        id: 6,
         name:'Boxing Gloves',
         price: { before: 99, after: 79 },
         filters: [
@@ -141,7 +141,7 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
       {
-        id: 8,
+        id: 7,
         name:'Leggings',
         price: { before: 89, after: 39 },
         filters: [
@@ -161,7 +161,7 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
       {
-        id: 9,
+        id: 8,
         name:'Skateboards',
         price: { before: 109, after: 99 },
         filters: [
@@ -181,7 +181,7 @@ const productsData = [
         linkTo:`Pages/product.html`
       }, 
       {
-        id: 10,
+        id: 9,
         name:'Lifting Bars',
         price: { before: 399, after: 250 },
         filters: [
@@ -212,7 +212,6 @@ const productsData = [
     prodArray.forEach((product) => {
   
     const oneProduct = document.createElement(`article`)
-    
     oneProduct.classList.add(`product`)
     oneProduct.innerHTML = `
         <header>
@@ -247,7 +246,7 @@ const productsData = [
         </fieldset>
     </form>
     <footer class="product-options add-product">
-        <button type="button" class="add-to-cart"></button>
+        <button type="button" class="add-to-cart" id="${product.id}"></button>
         <button type="button" class="add-favourite"></button>
     </footer>
     `
@@ -271,11 +270,8 @@ const productsData = [
         
         let prodName = product.name.toUpperCase()
 
-        if (prodName.includes(queryProduct)){
-          return true
-        } else {
-          return false
-        }
+        return (prodName.includes(queryProduct))
+         
         
       })
 
@@ -288,4 +284,23 @@ const productsData = [
   
   
 
+
+// add products to cart
+const addedToCart = []
+const addToCart = document.querySelectorAll('.add-to-cart')
+const cartIcon = document.querySelector(`.added-to-cart`)
+
+
+
+addToCart.forEach(button =>{
+
+  button.addEventListener('click', function(event, index){
+     index = button.id
+     const products = [...productsData]
+     const addedProduct = products[index]
+     addedToCart.push(addedProduct)
+     cartIcon.textContent = addedToCart.length
+
+  })
+})
 
