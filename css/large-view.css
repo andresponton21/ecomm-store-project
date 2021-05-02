@@ -44,7 +44,11 @@
         font-size: 0.7em;
     }
     .navigation{
+        display: block;
         grid-area: d;
+    }
+    .show-nav{
+        all: unset;
     }
     .your-products{
         grid-area: e;
@@ -56,6 +60,25 @@
         text-align: center;
         padding-top: 2em;
         margin-right: 15em;
+    }
+    .submenu{
+        display: none;
+        position: absolute;
+        top:100%;
+        background-color: var(--fifth-background);
+        text-align: left;
+        padding: 0;
+        font-size: 0.8em;
+        line-height: 1.5;
+        width: 9.5em;
+        border-radius: 0.5em;
+    }
+    .menu li{
+        position: relative;
+    }
+    .menu > li:hover > .submenu{
+        display: block;
+        
     }
     .menu > li{
         display: flex;

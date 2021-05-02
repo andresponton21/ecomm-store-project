@@ -22,6 +22,7 @@ body {
     linear-gradient(var(--third-background), var(--primary-background),var(--secondary-background));
     color: white;
     display: grid;
+    position: relative;
     grid-template-columns:auto 1fr auto auto; 
     grid-template-areas: 
     "logo empty prod toggle"
@@ -38,6 +39,8 @@ body {
 }
 .nav-toggle {
     grid-area: toggle;
+    border-radius: 0.5em;
+   
 }
 .search {
     grid-area: search;
@@ -49,7 +52,19 @@ body {
 .navigation {
     grid-area: nav;
     margin-bottom: 0.5em;
-    
+    display: none;
+}
+.show-nav{
+    display: block;
+    left: 70%;
+    background-color: var(--fifth-background);
+    text-align: right;
+    padding: 0;
+    font-size: 0.8em;
+    line-height: 1.5;
+    width: 9.5em;
+    border-radius: 0.5em;
+    position: absolute;
 }
 .your-products {
     display: flex;
@@ -107,27 +122,25 @@ a {
     color: white;
 }
 .submenu{
-    display: none;
-    position: absolute;
-    top:100%;
-    background-color: var(--fifth-background);
     text-align: left;
     padding: 0;
     font-size: 0.8em;
     line-height: 1.5;
     width: 9.5em;
     border-radius: 0.5em;
-}
-.menu li{
-    position: relative;
-}
-.menu > li:hover > .submenu{
-    display: block;
     
 }
+.hide-submenu{
+    display: none;
+}
+.menu{
+    text-align: left;
+}
+
 .menu a:hover {
     color:var(--alt-color2)
 }
+
 .menu a:active {
     color:var(--alt-color)
 }
