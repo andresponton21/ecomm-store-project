@@ -12,25 +12,23 @@
         --pad-and-gap-half:calc(var(--pad-and-gap)/2);
         --price-color:#BC0B28;
     }
+    /* header styling */
+    .menu{
+        margin-right: 25em;
+    }
+    /* filter styling */
     .filter-options{
         display: flex-start;
     } 
+    /* product styling */
     .results{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: "sh sh sh sh";
-
     }
     .subheading{
         grid-area: sh;
     }
-    
     .search-input{
         height: 3em;
     }
-    .menu{
-        margin-right: 25em;
-    }
-    
-
-
 }

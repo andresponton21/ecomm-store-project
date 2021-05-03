@@ -123,16 +123,17 @@ a {
     color:var(--alt-color)
 }
 .submenu{
+    display: none;
+}
+.show-sub-submenu{
+    display: block;
     text-align: left;
-    padding: 0;
+    padding-left: 0.5em;
     font-size: 0.8em;
     line-height: 1.5;
     width: 9.5em;
     border-radius: 0.5em;
     margin-bottom: 2em;
-}
-.hide-submenu{
-    display: none;
 }
 legend {
     margin-bottom: var(--pad-and-gap-half);

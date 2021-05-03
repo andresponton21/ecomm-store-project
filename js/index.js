@@ -309,13 +309,14 @@ addToCart.forEach(button =>{
 const navToggle = document.querySelector(`.nav-toggle`)
 const navMenu = document.querySelector(`#nav-menu`)
 const showSubMenu = document.querySelector('.show-submenu')
-const subMenu = document.querySelector('.submenu')
+const subMenu = document.querySelector('#submenu')
+
+showSubMenu.addEventListener(`click`, function(event){
+    
+  subMenu.classList.toggle('show-sub-submenu')
+})
 
 navToggle.addEventListener(`click`, function(event){
     
     navMenu.classList.toggle('show-nav')
-})
-showSubMenu.addEventListener(`click`, function(event){
-    
-  subMenu.classList.toggle('hide-submenu')
 })

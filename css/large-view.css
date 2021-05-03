@@ -14,12 +14,12 @@
         --price-color:#BC0B28;
         font-size: 0.8em;
     }
+    /* header style */
     .page-header{
         display: grid;
         grid-template-columns:auto 1fr auto auto auto;
         grid-template-areas: 
         "a c c d e";
-
     }
     .nav-toggle{
         display: none;
@@ -94,9 +94,7 @@
         line-height: 1.2;
         text-align: left;
     }
-    .products{
-        display: block;
-    }
+    /* filter styling */
     .filter-options{
         display: flex;
         justify-content: space-between;
@@ -112,6 +110,11 @@
         font-size: 0.7em;
         color: var(--font-color1);
     }
+    /* products styling */
+    .products{
+        display: block;
+    }
+
     .results{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -130,6 +133,4 @@
         grid-template-areas: "opt1 opt2";
     }
   
-   
-
 }
