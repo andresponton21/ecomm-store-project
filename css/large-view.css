@@ -55,6 +55,7 @@
         padding-top: 1em;
     }
     .menu{
+        all: unset;
         display: flex;
         font-size: 0.7em;
         text-align: center;
