@@ -29,8 +29,25 @@
     .page-header{
         font-size: 1.2em;
     }
+    .heading{
+        grid-area: heading;
+        font-size: 0.8em;
+    }
     .search-input{
         width: 55%;
+    }
+    .filters{
+        grid-area: filter;
+        padding-left: 0.7em;
+        border-radius: 0.5em;
+        color: black;
+        font-size: 0.75em;
+    }
+    .filter-list img{
+        width: 8em;
+    }
+    .star{
+        width: 25%;
     }
     .products{
         display: grid;
@@ -44,31 +61,8 @@
         
         ;
     }
-    .heading{
-        grid-area: heading;
-        font-size: 0.8em;
-    }
-    .filters{
-        grid-area: filter;
-        padding-left: 0.7em;
-        border-radius: 0.5em;
-        color: black;
-        font-size: 0.75em;
-    }
-    .filter-list img{
-        width: 8em;
-    }
     .results{
         grid-area: result;
-    }
-    .pagination{
-        grid-area: pag;
-    }
-    .star{
-        width: 25%;
-    }
-    .page-footer{
-        font-size: 0.6em;
     }
     .results{
         display: grid;
@@ -99,5 +93,10 @@
     .product p{
         font-size: 0.8em;
     }
-  
+    .pagination{
+        grid-area: pag;
+    }
+    .page-footer{
+        font-size: 0.6em;
+    } 
   }
