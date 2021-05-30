@@ -205,7 +205,7 @@ const productsData = [
     query: '',
     price: 0,
     courses: [],
-    sort: (a, b) => a.price.after - b.price.after
+    sort: () => {}
   }
 
   //Products are added to the UI using JavaScript only 
@@ -295,7 +295,7 @@ const productsData = [
       searchFilter.sort = (a, b) => a.price.after - b.price.after
     } else if (event.target.value === "1") {
       searchFilter.sort = (a, b) => b.price.after - a.price.after
-    }
+    } else {searchFilter.sort = ()=>{}}
   
     filterAndSort()
   })
