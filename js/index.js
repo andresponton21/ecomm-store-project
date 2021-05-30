@@ -201,11 +201,20 @@ const productsData = [
       }, 
   ]
 
+  const searchFilter = {
+    query: '',
+    price: 0,
+    courses: [],
+    sort: (a, b) => a.price.after - b.price.after
+  }
+
   //Products are added to the UI using JavaScript only 
   //(reading from the products Array)
   
   const productsSection = document.querySelector(`.results`)
   const searchInput = document.querySelector('.search-input')
+  const selectOption = document.querySelector('.select-option')
+
 
   const showProducts = function(prodArray){  
     productsSection.innerHTML = '<h2 class="subheading">Results</h2>'
@@ -261,62 +270,73 @@ const productsData = [
   //(each student will implement ONE filtering method)
   //implementing a search filter
 
+  const filterAndSort = function() {
+
+  
+    const filteredArray = productsData.filter((product) => product.name.toUpperCase().includes(searchFilter.query))
+                                      .sort(searchFilter.sort)
 
 
-  searchInput.addEventListener('input', function(event){
-      const queryProduct = event.target.value.toUpperCase()
-      
-      const filterProducts = productsData.filter(function(product){
-        
-        let prodName = product.name.toUpperCase()
 
-        return (prodName.includes(queryProduct))
-         
-        
-      })
+    showProducts(filteredArray) 
+  }
 
-      showProducts(filterProducts) 
-      
+  searchInput.addEventListener(`input`, function(event) {
+    searchFilter.query = event.target.value.toUpperCase()
+  
+    // Now search
+    filterAndSort()
   })
 
 
-  showProducts(productsData)
+  selectOption.addEventListener(`change`, function(event) {
+  
+    if (event.target.value === "0") {
+      searchFilter.sort = (a, b) => a.price.after - b.price.after
+    } else if (event.target.value === "1") {
+      searchFilter.sort = (a, b) => b.price.after - a.price.after
+    }
+  
+    filterAndSort()
+  })
+  
+filterAndSort()
   
   
 
 
 // add products to cart
-const addedToCart = []
-const addToCart = document.querySelectorAll('.add-to-cart')
-const cartIcon = document.querySelector(`.added-to-cart`)
+// const addedToCart = []
+// const addToCart = document.querySelectorAll('.add-to-cart')
+// const cartIcon = document.querySelector(`.added-to-cart`)
 
 
 
-addToCart.forEach(button =>{
+// addToCart.forEach(button =>{
 
-  button.addEventListener('click', function(event, index){
-     index = button.id
-     const products = [...productsData]
-     const addedProduct = products[index]
-     addedToCart.push(addedProduct)
-     cartIcon.textContent = addedToCart.length
+//   button.addEventListener('click', function(event, index){
+//      index = button.id
+//      const products = [...productsData]
+//      const addedProduct = products[index]
+//      addedToCart.push(addedProduct)
+//      cartIcon.textContent = addedToCart.length
 
-  })
-})
+//   })
+// })
 
-//Main menu that will toggle open/closed in the smallest viewport size
+// //Main menu that will toggle open/closed in the smallest viewport size
 
-const navToggle = document.querySelector(`.nav-toggle`)
-const navMenu = document.querySelector(`#nav-menu`)
-const showSubMenu = document.querySelector('.show-submenu')
-const subMenu = document.querySelector('#submenu')
+// const navToggle = document.querySelector(`.nav-toggle`)
+// const navMenu = document.querySelector(`#nav-menu`)
+// const showSubMenu = document.querySelector('.show-submenu')
+// const subMenu = document.querySelector('#submenu')
 
-showSubMenu.addEventListener(`click`, function(event){
+// showSubMenu.addEventListener(`click`, function(event){
     
-  subMenu.classList.toggle('show-sub-submenu')
-})
+//   subMenu.classList.toggle('show-sub-submenu')
+// })
 
-navToggle.addEventListener(`click`, function(event){
+// navToggle.addEventListener(`click`, function(event){
     
-    navMenu.classList.toggle('show-nav')
-})
+//     navMenu.classList.toggle('show-nav')
+// })
