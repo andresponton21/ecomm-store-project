@@ -22,7 +22,8 @@ const productsData = [
       photo: `ropes`,
       description: `You'll train the muscles in your upper back, arms, abs, back, 
       glutes and if you incorporate jumps, lunges, and squats`,
-      linkTo:`Pages/product.html`
+      linkTo:`Pages/product.html`,
+      category: ['conditioning', 'calisthenics']
     }, 
     {
       id: 1,
@@ -41,7 +42,8 @@ const productsData = [
       photo: `stability_core`,
       description: `Adding core strengthening to your exercise routine can help protect your back and neck. 
       By boosting your core strength`,
-      linkTo:`Pages/product.html`
+      linkTo:`Pages/product.html`,
+      category: ['conditioning', 'calisthenics']
     },
   
       {
@@ -61,7 +63,8 @@ const productsData = [
         photo: `bike`,
         description: `These help you shed fat, improve your heart health, and boost your muscle endurance. 
         Your legs will get a serious workout.`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['cardio']
       }, 
       {
         id: 3,
@@ -81,7 +84,8 @@ const productsData = [
         photo: `dumbell`,
         description: `Dumbbells can give you a great full body workout and are ever preferred for certain exercises by some. 
         For each body part their is a wide variety of dumbbell movements that can be preformed`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['dumbbells']
       }, 
       {
         id: 4,
@@ -100,7 +104,8 @@ const productsData = [
         photo: `treadmill`,
         description: `Walking or running on a treadmill is an excellent source of exercise 
         that puts less stress on the body than walking or running on a flat surface outdoors`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['cardio']
       }, 
       {
         id: 5,
@@ -119,7 +124,8 @@ const productsData = [
         photo: `matt`,
         description: `Is perfect for a Enhanced body strength, 
         HIIT workouts, crunches, pushups and yoga`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['conditioning', 'calisthenics']
       }, 
       {
         id: 6,
@@ -138,7 +144,8 @@ const productsData = [
         photo: `boxing`,
         description: `cushioned gloves that boxers wear during matches and training sessions. 
         They're designed to protect the wearer and his or her opponent from injuries while fighting`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['conditioning', 'calisthenics']
       }, 
       {
         id: 7,
@@ -158,7 +165,9 @@ const productsData = [
         description: `worn for warmth and protection by both men and women throughout the centuries. 
         The linen pantalettes worn by girls and women under crinolines in the mid-19th century were also a 
         form of leggings, and were originally two separate garments`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['conditioning']
+
       }, 
       {
         id: 8,
@@ -178,7 +187,8 @@ const productsData = [
         description: `sports scientists have confirmed that skateboarding is a complete workout in itself. 
         It not only works the cardiovascular system but also builds muscular strength. 
         The core of a skateboarder plays a very crucial role`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['conditioning']
       }, 
       {
         id: 9,
@@ -197,14 +207,15 @@ const productsData = [
         photo: `liftbar`,
         description: `A piece of exercise equipment used in weight training, 
         bodybuilding, weightlifting and powerlifting`,
-        linkTo:`Pages/product.html`
+        linkTo:`Pages/product.html`,
+        category: ['weights'],
       }, 
   ]
 
   const searchFilter = {
     query: '',
     price: 0,
-    courses: [],
+    filterCategory: [],
     sort: () => {}
   }
 
@@ -214,6 +225,7 @@ const productsData = [
   const productsSection = document.querySelector(`.results`)
   const searchInput = document.querySelector('.search-input')
   const selectOption = document.querySelector('.select-option')
+  const filterCategories = document.querySelector('.filter-category')
 
 
   const showProducts = function(prodArray){  
@@ -264,31 +276,27 @@ const productsData = [
   
   })
 }
-//showProducts(productsData)
 
-  //Products can be filtered 
-  //(each student will implement ONE filtering method)
-  //implementing a search filter
-
+// filter and sort main function
   const filterAndSort = function() {
-
-  
+    
     const filteredArray = productsData.filter((product) => product.name.toUpperCase().includes(searchFilter.query))
+                                      .filter((product) => searchFilter.filterCategory.length === 0 || 
+                                      product.category.filter((prod) => searchFilter.filterCategory.includes(prod)).length > 0)
                                       .sort(searchFilter.sort)
-
 
 
     showProducts(filteredArray) 
   }
 
+
+  //look for a product with input search
   searchInput.addEventListener(`input`, function(event) {
     searchFilter.query = event.target.value.toUpperCase()
-  
-    // Now search
     filterAndSort()
   })
 
-
+// sort by price with option select input
   selectOption.addEventListener(`change`, function(event) {
   
     if (event.target.value === "0") {
@@ -299,6 +307,19 @@ const productsData = [
   
     filterAndSort()
   })
+
+
+//filter with checkbutton
+filterCategories.addEventListener(`change`, function(event) {
+  
+  const newProductCategory = event.target.form.elements[event.target.name]
+
+  searchFilter.filterCategory = [...newProductCategory]
+                            .filter((prod) => prod.checked)
+                            .map((prod) => prod.value)
+                          
+  filterAndSort()
+})
   
 filterAndSort()
   
@@ -324,19 +345,19 @@ filterAndSort()
 //   })
 // })
 
-// //Main menu that will toggle open/closed in the smallest viewport size
+//Main menu that will toggle open/closed in the smallest viewport size
 
-// const navToggle = document.querySelector(`.nav-toggle`)
-// const navMenu = document.querySelector(`#nav-menu`)
-// const showSubMenu = document.querySelector('.show-submenu')
-// const subMenu = document.querySelector('#submenu')
+const navToggle = document.querySelector(`.nav-toggle`)
+const navMenu = document.querySelector(`#nav-menu`)
+const showSubMenu = document.querySelector('.show-submenu')
+const subMenu = document.querySelector('#submenu')
 
-// showSubMenu.addEventListener(`click`, function(event){
+showSubMenu.addEventListener(`click`, function(event){
     
-//   subMenu.classList.toggle('show-sub-submenu')
-// })
+  subMenu.classList.toggle('show-sub-submenu')
+})
 
-// navToggle.addEventListener(`click`, function(event){
+navToggle.addEventListener(`click`, function(event){
     
-//     navMenu.classList.toggle('show-nav')
-// })
+    navMenu.classList.toggle('show-nav')
+})
