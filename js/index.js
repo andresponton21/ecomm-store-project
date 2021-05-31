@@ -354,7 +354,7 @@ filterRating.addEventListener('click', function(event){
   searchFilter.ratingStar = event.target.value
   
   filterAndSort()
-  //Reset the rating value to empty
+  //Reset the rating valut to empty
   searchFilter.ratingStar = ''
 })
   
