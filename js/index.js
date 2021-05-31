@@ -78,7 +78,7 @@ filterRating.addEventListener('click', function(event){
   
 filterAndSort()
 
-// add products to cart
+// add products to cart array
 
 const addToCart = document.querySelectorAll('.add-to-cart')
 const cartIcon = document.querySelector(`.added-to-cart`)
