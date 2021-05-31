@@ -226,7 +226,8 @@ const productsData = [
     query: '',
     price: 0,
     filterCategory: [],
-    sort: () => {}
+    sort: () => {},
+    ratingStar:''
   }
 
   //Products are added to the UI using JavaScript only 
@@ -237,6 +238,9 @@ const productsData = [
   const selectOption = document.querySelector('.select-option')
   const filterCategories = document.querySelector('.filter-category')
   const filterPrice = document.querySelector(`#filterPrice`)
+  const filterRating = document.querySelector(`#filterRating`)
+
+
 
 
   const showProducts = function(prodArray){  
@@ -293,6 +297,7 @@ const productsData = [
     
     const filteredArray = productsData.filter((product) => product.price.after >= searchFilter.price)
                                       .filter((product) => product.name.toUpperCase().includes(searchFilter.query))
+                                      .filter((product) => product.rating.includes(searchFilter.ratingStar))
                                       .filter((product) => searchFilter.filterCategory.length === 0 || 
                                       product.category.filter((cat) => searchFilter.filterCategory.includes(cat)).length > 0)
                                       .sort(searchFilter.sort)
@@ -300,7 +305,7 @@ const productsData = [
 
     showProducts(filteredArray) 
   }
-
+//filter with range value
   filterPrice.addEventListener(`input`, function(event) {
 
     const theRange = event.target
@@ -342,6 +347,15 @@ filterCategories.addEventListener(`change`, function(event) {
                             .map((prod) => prod.value)
                           
   filterAndSort()
+})
+
+filterRating.addEventListener('click', function(event){
+  
+  searchFilter.ratingStar = event.target.value
+  
+  filterAndSort()
+  //Reset the rating value to empty
+  searchFilter.ratingStar = ''
 })
   
 filterAndSort()
