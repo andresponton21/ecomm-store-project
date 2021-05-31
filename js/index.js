@@ -23,7 +23,8 @@ const productsData = [
       description: `You'll train the muscles in your upper back, arms, abs, back, 
       glutes and if you incorporate jumps, lunges, and squats`,
       linkTo:`Pages/product.html`,
-      category: ['conditioning', 'calisthenics']
+      category: ['conditioning', 'calisthenics'],
+      rating: 'four'
     }, 
     {
       id: 1,
@@ -43,7 +44,8 @@ const productsData = [
       description: `Adding core strengthening to your exercise routine can help protect your back and neck. 
       By boosting your core strength`,
       linkTo:`Pages/product.html`,
-      category: ['conditioning', 'calisthenics']
+      category: ['conditioning', 'calisthenics'],
+      rating: 'five'
     },
   
       {
@@ -64,7 +66,8 @@ const productsData = [
         description: `These help you shed fat, improve your heart health, and boost your muscle endurance. 
         Your legs will get a serious workout.`,
         linkTo:`Pages/product.html`,
-        category: ['cardio']
+        category: ['cardio'],
+        rating: 'four'
       }, 
       {
         id: 3,
@@ -85,7 +88,8 @@ const productsData = [
         description: `Dumbbells can give you a great full body workout and are ever preferred for certain exercises by some. 
         For each body part their is a wide variety of dumbbell movements that can be preformed`,
         linkTo:`Pages/product.html`,
-        category: ['dumbbells']
+        category: ['dumbbells'],
+        rating: 'three'
       }, 
       {
         id: 4,
@@ -105,7 +109,8 @@ const productsData = [
         description: `Walking or running on a treadmill is an excellent source of exercise 
         that puts less stress on the body than walking or running on a flat surface outdoors`,
         linkTo:`Pages/product.html`,
-        category: ['cardio']
+        category: ['cardio'],
+        rating: 'three'
       }, 
       {
         id: 5,
@@ -125,7 +130,8 @@ const productsData = [
         description: `Is perfect for a Enhanced body strength, 
         HIIT workouts, crunches, pushups and yoga`,
         linkTo:`Pages/product.html`,
-        category: ['conditioning', 'calisthenics']
+        category: ['conditioning', 'calisthenics'],
+        rating: 'two'
       }, 
       {
         id: 6,
@@ -145,7 +151,8 @@ const productsData = [
         description: `cushioned gloves that boxers wear during matches and training sessions. 
         They're designed to protect the wearer and his or her opponent from injuries while fighting`,
         linkTo:`Pages/product.html`,
-        category: ['conditioning', 'calisthenics']
+        category: ['conditioning', 'calisthenics'],
+        rating: 'one'
       }, 
       {
         id: 7,
@@ -166,7 +173,8 @@ const productsData = [
         The linen pantalettes worn by girls and women under crinolines in the mid-19th century were also a 
         form of leggings, and were originally two separate garments`,
         linkTo:`Pages/product.html`,
-        category: ['conditioning']
+        category: ['conditioning'],
+        rating: 'four'
 
       }, 
       {
@@ -188,7 +196,8 @@ const productsData = [
         It not only works the cardiovascular system but also builds muscular strength. 
         The core of a skateboarder plays a very crucial role`,
         linkTo:`Pages/product.html`,
-        category: ['conditioning']
+        category: ['conditioning'],
+        rating: 'five'
       }, 
       {
         id: 9,
@@ -209,6 +218,7 @@ const productsData = [
         bodybuilding, weightlifting and powerlifting`,
         linkTo:`Pages/product.html`,
         category: ['weights'],
+        rating: 'two'
       }, 
   ]
 
@@ -226,6 +236,7 @@ const productsData = [
   const searchInput = document.querySelector('.search-input')
   const selectOption = document.querySelector('.select-option')
   const filterCategories = document.querySelector('.filter-category')
+  const filterPrice = document.querySelector(`#filterPrice`)
 
 
   const showProducts = function(prodArray){  
@@ -243,7 +254,7 @@ const productsData = [
       
         <dt>Rating</dt>
           <dt>
-            <img class="star" src="assets/SVG/fourstars.svg" alt="stars">
+            <img class="star" src="assets/SVG/${product.rating}stars.svg" alt="stars">
             <!-- <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span> -->
           </dt>
         <a class="see-more" href="${product.linkTo}">see product</a>
@@ -280,14 +291,26 @@ const productsData = [
 // filter and sort main function
   const filterAndSort = function() {
     
-    const filteredArray = productsData.filter((product) => product.name.toUpperCase().includes(searchFilter.query))
+    const filteredArray = productsData.filter((product) => product.price.after >= searchFilter.price)
+                                      .filter((product) => product.name.toUpperCase().includes(searchFilter.query))
                                       .filter((product) => searchFilter.filterCategory.length === 0 || 
-                                      product.category.filter((prod) => searchFilter.filterCategory.includes(prod)).length > 0)
+                                      product.category.filter((cat) => searchFilter.filterCategory.includes(cat)).length > 0)
                                       .sort(searchFilter.sort)
 
 
     showProducts(filteredArray) 
   }
+
+  filterPrice.addEventListener(`input`, function(event) {
+
+    const theRange = event.target
+    const theOutput = document.querySelector(`output[for="filterPrice"]`)
+    theOutput.textContent = `$${theRange.value}`  
+    searchFilter.price = Number(theRange.value)
+  
+    filterAndSort()
+  
+  })
 
 
   //look for a product with input search

@@ -166,6 +166,29 @@ fieldset{
 .filter-list img{
     width: 6em;
 }
+.slider{
+    padding-top: 1.5em;
+}
+.slider label{
+    line-height: 3em;
+}
+.input-slider{
+    opacity: 0.5;
+}
+.input-slider:active{
+    opacity: 1;
+}
+.filter-list .star {
+    opacity: 0.65;
+  }
+  .filter-list .star:hover {
+    opacity: 1;
+  }
+.output-price{
+    color: var(--alt-color);
+    font-weight: bold;
+    opacity: 0.65;
+}
 .radio, .checkbox{
     display: none;
 }
