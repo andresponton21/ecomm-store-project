@@ -7,7 +7,7 @@ const filterAndSort = function() {
     
     const filteredArray = productsData.filter((product) => product.price.after >= searchFilter.price)
                                       .filter((product) => product.name.toUpperCase().includes(searchFilter.query))
-                                      .filter((product) => product.rating.includes(searchFilter.ratingStar))
+                                      .filter((product) => product.rating.includes(searchFilter.ratingStar))                          
                                       .filter((product) => searchFilter.filterCategory.length === 0 || 
                                       product.category.filter((cat) => searchFilter.filterCategory.includes(cat)).length > 0)
                                       .sort(searchFilter.sort)

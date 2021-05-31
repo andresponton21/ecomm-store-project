@@ -1,5 +1,3 @@
-import productsData from './productsData.js';
-import showProducts from './showProducts.js';
 import filterAndSort from './filterAndSort.js';
 
 
@@ -9,7 +7,8 @@ import filterAndSort from './filterAndSort.js';
     price: 0,
     filterCategory: [],
     sort: () => {},
-    ratingStar:''
+    ratingStar:'',
+    addedToCart : []
   }
 
   //Products are added to the UI using JavaScript only 
@@ -78,28 +77,22 @@ filterRating.addEventListener('click', function(event){
 })
   
 filterAndSort()
-  
-  
-
 
 // add products to cart
-// const addedToCart = []
-// const addToCart = document.querySelectorAll('.add-to-cart')
-// const cartIcon = document.querySelector(`.added-to-cart`)
+
+const addToCart = document.querySelectorAll('.add-to-cart')
+const cartIcon = document.querySelector(`.added-to-cart`)
 
 
 
-// addToCart.forEach(button =>{
-
-//   button.addEventListener('click', function(event, index){
-//      index = button.id
-//      const products = [...productsData]
-//      const addedProduct = products[index]
-//      addedToCart.push(addedProduct)
-//      cartIcon.textContent = addedToCart.length
-
-//   })
-// })
+addToCart.forEach(button =>{
+  
+  button.addEventListener('click', function(event){
+    searchFilter.addedToCart.push(event.target.id)
+    cartIcon.textContent = searchFilter.addedToCart.length
+  
+  })
+})
 
 //Main menu that will toggle open/closed in the smallest viewport size
 
