@@ -197,7 +197,7 @@ fieldset{
     padding-left: 1.5em;
     cursor: pointer;
 } 
-.radio:checked + .radio-button{
+input:checked + .radio-button{
     background: url(../assets/SVG/unchecked-readio.svg) no-repeat left;
     padding-left: 1.5em;
     cursor: pointer;

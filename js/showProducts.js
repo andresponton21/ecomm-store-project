@@ -27,17 +27,17 @@ const showProducts = function(prodArray){
         <fieldset class="product-options">
         <legend>${product.filters[0].filterName}</legend>
         <ul>
-            <li><label class="radio-button"><input type="radio" class="radio" name="colour" value="r"> ${product.filters[0].filterOptions[0]}</label></li>
-            <li><label class="radio-button"><input type="radio" class="radio" name="colour" value="b"> ${product.filters[0].filterOptions[1]}</label></li>
-            <li><label class="radio-button"><input type="radio" class="radio" name="colour" value="g"> ${product.filters[0].filterOptions[2]}</label></li>
+            <li><input type="radio" class="radio" name="colour" value="r" id="r"><label for="r" class="radio-button"> ${product.filters[0].filterOptions[0]}</label></li>
+            <li><input type="radio" class="radio" name="colour" value="b" id="b"><label for="b" class="radio-button"> ${product.filters[0].filterOptions[1]}</label></li>
+            <li><input type="radio" class="radio" name="colour" value="g" id="g"><label for="g" class="radio-button"> ${product.filters[0].filterOptions[2]}</label></li>
         </ul>
         </fieldset>
         <fieldset class="product-options">
         <legend>${product.filters[1].filterName}</legend>
         <ol>
-            <li><label class="radio-button"><input type="radio" class="radio" name="size" value="s"> ${product.filters[1].filterOptions[0]}</label></li>
-            <li><label class="radio-button"><input type="radio" class="radio" name="size" value="m"> ${product.filters[1].filterOptions[1]}</label></li>
-            <li><label class="radio-button"><input type="radio" class="radio" name="size" value="l"> ${product.filters[1].filterOptions[2]}</label></li>
+            <li><input type="radio" class="radio" name="size" value="s" id="s"><label for="s" class="radio-button"> ${product.filters[1].filterOptions[0]}</label></li>
+            <li><input type="radio" class="radio" name="size" value="m" id="m"><label for="m" class="radio-button"> ${product.filters[1].filterOptions[1]}</label></li>
+            <li><input type="radio" class="radio" name="size" value="l" id="l"><label for="l" class="radio-button"> ${product.filters[1].filterOptions[2]}</label></li>
         </ol>
         </fieldset>
     </form>
