@@ -29,6 +29,7 @@
     .page-header{
         font-size: 1.2em;
     }
+    
     .heading{
         grid-area: heading;
         font-size: 0.8em;
@@ -51,6 +52,8 @@
     }
     .products{
         display: grid;
+        max-width: 90em;
+        margin: auto;
         grid-template-columns: 15em auto;
         grid-gap: var(--pad-and-gap);
         grid-template-areas: 
@@ -81,8 +84,11 @@
         grid-template-areas: "opt1 opt2";
         font-size: 0.8em;
     }
-    .product img{
+    .images{
         max-height: 20em;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
     }
     .form-options{
         margin-bottom: 4em;

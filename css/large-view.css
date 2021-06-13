@@ -16,6 +16,8 @@
     }
     /* header style */
     .page-header{
+        max-width: 80em;
+        margin: auto;
         display: grid;
         grid-template-columns:auto 1fr auto auto auto;
         grid-template-areas: 
@@ -131,6 +133,10 @@
     .form-options{
         display: grid;
         grid-template-areas: "opt1 opt2";
+    }
+    footer{
+        max-width: 150em;
+        margin: auto;
     }
   
 }

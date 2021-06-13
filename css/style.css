@@ -234,13 +234,18 @@ ins{
     margin-bottom: 1em;
     position: relative;
 }
-.product a {
+.product .see-more {
     color: white;
     text-decoration: none;
     background-color:var(--primary-background);
     padding: 0.25em;
     border-radius: 0.5em;
     box-shadow: 0.1em 0.2em #888888;
+}
+.product-name{
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
 }
 .product-options li{
     margin-bottom: var(--pad-and-gap-half);

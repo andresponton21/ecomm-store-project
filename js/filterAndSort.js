@@ -2,6 +2,7 @@ import productsData from './productsData.js';
 import showProducts from './showProducts.js'
 import {searchFilter} from './index.js'
 
+let pageNumber = document.querySelector('.page-number')
 // filter and sort main function
 const filterAndSort = function() {
     
@@ -14,6 +15,7 @@ const filterAndSort = function() {
 
 
     showProducts(filteredArray) 
+    pageNumber.textContent = `${filteredArray.length} of ${productsData.length} products found`
   };
 
   export default filterAndSort;

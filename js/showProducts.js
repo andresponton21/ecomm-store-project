@@ -8,8 +8,11 @@ const showProducts = function(prodArray){
     oneProduct.classList.add(`product`)
     oneProduct.innerHTML = `
         <header>
-        <img src="assets/img/${product.photo}.jpg" alt="${product.name}" >
-        <h3>${product.name}</h3>
+        <a class="product-name" href="${product.linkTo}">
+        <img class="images" src="assets/img/${product.photo}.jpg" alt="${product.name}" >
+        </a>
+        <a class="product-name" href="${product.linkTo}">
+        <h3>${product.name}</h3></a>
         <data value="119"><del>$${product.price.before.toFixed(2)}</del> <ins>$${product.price.after.toFixed(2)}</ins></data>
         <p>${product.description}</p>
       
