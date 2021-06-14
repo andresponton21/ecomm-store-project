@@ -15,6 +15,8 @@ body {
     line-height: 1.25;
     font-family: "Arial Rounded MT Bold" ;
     color: var(--font-color1);
+    max-width: 90em;
+    margin: auto;
 }
 a {
     color: white;
@@ -39,8 +41,7 @@ p{
     grid-area: logo;
     background-image: url(../assets/SVG/logo.svg);
     background-repeat: no-repeat;
-    margin-bottom: 0.25em;
-    width: 10em;
+    width: 8em;
 }
 .nav-toggle {
     grid-area: toggle;
@@ -278,7 +279,7 @@ dt{
 
   }
 /* large viewport layout */
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 768px) {
     
     body {
       font-size: 1.35em;
@@ -290,21 +291,10 @@ dt{
     .star{
         width: 35%;
     }
-    
-   
-   
-  }
-/* extra-large viewport layout */
-@media only screen and (min-width: 60em) {
-   
-    .star{
-        width: 15%;
-    }
-   
     .image-grid{
         display: grid;
-        grid-gap:0.25em;
         grid-template-columns: 3fr 1fr;
+        grid-gap: unset;
         grid-template-areas: 
         "main alt1"
         "main alt2"
@@ -314,29 +304,46 @@ dt{
     }
     .main-img{
         grid-area: main;
-        border: 0.15em solid var(--fourth-background);
-        align-self: stretch;
-        max-width: 30em;
+        border-radius: 0.3em;
+        max-height: 32em;
         justify-self:center;
-        
+        object-fit: cover;
+        object-position: top;
     }
     .alt-img1{
-        height: 15em;
+        max-height: 10em;
         grid-area: alt1;
-        border: 0.15em solid var(--fourth-background);
-        align-self: stretch;
+        border-radius: 0.3em;
+        object-fit: cover;
+        object-position: top;
     }
     .alt-img2{
-        height: 15em;
+        max-height: 10em;
         grid-area: alt2;
-        border: 0.15em solid var(--fourth-background);
-        align-self: stretch;
+        border-radius: 0.3em;
+      
     }
     .alt-img3{
-        height: 15em;
+        max-height: 10em;
         grid-area: alt3;
-        border: 0.15em solid var(--fourth-background);
-        align-self: stretch;
+        border-radius: 0.3em;
+        
+    }
+   
+   
+  }
+/* extra-large viewport layout */
+@media only screen and (min-width: 60em) {
+   
+    .star{
+        width: 15%;
+    }
+    .image-grid{
+        margin-bottom: 1em;
+    }
+    .main-img{
+        margin-left: 0;
+        padding-left: 0;
     }
     .legal{
         display: flex;
@@ -347,6 +354,9 @@ dt{
     .social li{
         font-size: 0.8em;
     }
-
+    .product{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
 }
 
