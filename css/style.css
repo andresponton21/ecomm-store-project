@@ -291,7 +291,8 @@ dt{
 /* footer styling */
 
 body .page-footer{
-    background-color: var(--fifth-background);
+    background-image: 
+    linear-gradient(var(--third-background), var(--primary-background),var(--secondary-background));;
     color: white;
     margin-bottom: -1em;
    
